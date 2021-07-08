@@ -1,0 +1,14 @@
+// ----------------------------------------------
+// ICON / IMAGES
+// ----------------------------------------------
+
+.o-icon {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    img {
+        width: 36px;
+        cursor: pointer;
+    }
+}

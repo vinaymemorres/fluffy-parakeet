@@ -1,0 +1,177 @@
+// ----------------------------------------------
+// Theme Button Style
+// ----------------------------------------------
+
+.c-button {
+	font-family: $btn-font;
+	font-size: $btn-font-size;
+	padding: $btn-padding;
+	line-height: $btn-linehieght;
+	text-transform: $btn-text-transform;
+	text-align: $btn-text-align;
+	border: $border-btn;
+	border-radius: 5px;
+	color: palette(mono, white);
+	background-color: palette(blue, base);
+	cursor: pointer;
+	margin-top: 15px;
+	margin-bottom: 0;
+	outline: none;
+	text-decoration: none;
+	position: relative;
+	transition: all 0.2s;
+
+	&.button-radius {
+		border-radius: 50px;
+	}
+
+	&:hover {
+		background-color: palette(blue, dark);
+		@include transition(.25s ease-in-out all);
+	}
+
+	&:focus {
+		background-color: palette(blue, dark);
+		border-color: palette(blue, dark);
+	}
+
+	&--rounded {
+		@include border-radius(50px);
+		@include transition(.25s ease-in-out all);
+	}
+
+	&--large {
+		font-size: 22px;
+		padding: 14px 58px 17px 58px;
+	}
+
+	&--secondary {
+		color: palette(blue, base);
+		background-color: palette(blue, light);
+
+		&:active {
+			color: palette(blue, base) !important;
+			background-color: #d5deef !important;
+			border-color: #d5deef !important;
+		}
+
+		&:hover {
+			color: palette(blue, base);
+			background-color: palette(blue, light);
+			@include transition(.25s ease-in-out all);
+		}
+	
+		&:focus {
+			color: palette(blue, base);
+			background-color: palette(blue, light);
+			border-color: palette(blue, light);
+		}
+	}
+
+	&--link {
+		background-color: transparent;
+		color: palette(blue, dark);
+		border-radius: 0;
+		border-bottom: 2px solid;
+		padding: 0;
+
+		&:hover {
+			background-color: inherit;
+			color: #005cbf;
+			border-color: #005cbf;
+		}
+
+		&:focus {
+			background-color: inherit;
+			color: palette(blue, dark);
+		}
+
+		&:active {
+			color: #005cbf !important;
+			background-color: inherit !important;
+		}
+	}
+
+	&::-moz-focus-inner {  /* Removes dotted line in Firefox */
+		border: 0;
+	}
+
+	&:disabled{
+		cursor: not-allowed;
+	}
+
+	img {
+		width: 18px;
+		margin-right: 8px;
+	}
+	
+	&.btn-icon {
+		display: flex;
+		align-items: center;
+		text-align: center;
+		justify-content: center;
+	  }
+	  &--top{
+		  margin-left:15px;
+		  margin-top:0;
+	  }
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show>.btn-primary.dropdown-toggle:focus {
+	box-shadow: 0 0 0 0.0rem rgba(38, 143, 255, .5);
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+	color: #fff;
+	background-color: palette(blue, base);
+	border-color: palette(blue, base);
+
+	&.c-button--secondary {
+		color: palette(blue, base);
+		background-color: palette(blue, light);
+		border-color: palette(blue, light);
+	}
+}
+
+.btn.disabled,
+.btn:disabled {
+	opacity: 1;
+}
+
+// remove dotted outline/border in Firefox
+button:focus,
+a:focus,
+a:active,
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner,
+select::-moz-focus-inner,
+input[type="file"]>input[type="button"]::-moz-focus-inner {
+	outline: none !important;
+}
+
+select:-moz-focusring {
+	color: transparent;
+	text-shadow: 0 0 0 #000;
+}
+
+.btn.focus,
+.btn:focus {
+	outline: 0;
+	box-shadow: 0 0 0 0rem rgba(0, 123, 255, .25);
+}
+
+a {
+	&.c-button {
+		color: palette(mono, white);
+		
+		&:hover {
+			color: palette(mono, white);
+		}
+	}
+}
+

@@ -1,0 +1,23 @@
+// ----------------------------------------------
+// Themes Color Style
+// ----------------------------------------------
+
+// palette(mono, black);
+
+@function palette($palette, $tone: 'base') {
+    @return map-get( map-get($palettes, $palette), $tone );
+}
+
+$palettes: (
+    mono: (
+        white:        #ffffff,
+        grey:         #77869E,
+        light:        #DADADA,
+        light-gray:   #8C8D8D,
+        black:        #000000,
+    ),
+    blue: (
+        base:         #0047CC,
+        dark:         #042C5C,
+    )
+);

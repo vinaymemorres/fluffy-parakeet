@@ -1,0 +1,69 @@
+// ----------------------------------------------
+// HEADINGS
+// ----------------------------------------------
+
+//Simple default styles for headings 1 through 6.
+
+
+h1 {
+  font-family: $primary-font;
+  color: palette(blue, base);
+  font-size: 30px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+
+  span {
+      background-color: palette(blue, light);
+      font-size: 18px;
+      padding: 5px 15px;
+      border-radius: 4px;
+      margin-left: 15px;
+  }
+}
+
+h2 {
+  font-family: $primary-font;
+  color: palette(blue, base);
+  font-size: 28px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+h3 {
+  font-family: $primary-font;
+  color: palette(blue, dark);
+  font-size: 24px;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+h4 {
+  font-family: $primary-font;
+  color: palette(blue, dark);
+  font-size: 19px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+h5 {
+  font-family: $primary-font;
+  color: palette(blue, base);
+  font-size: 18px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+h6 {
+  font-family: $primary-font;
+  color: palette(blue, base);
+  font-size: 16px;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  em {
+    font-style: normal;
+    font-size: 19px;
+  }
+}
